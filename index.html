@@ -121,14 +121,11 @@
         </div>
     </div>
 
+    <script src="config.js"></script>
     <script>
-        const FORM_URLS = {
-            english: 'https://docs.google.com/forms/d/e/1FAIpQLSeFRHH5WN0k3T9WZALpeKvypfJ3y_t0PXEVewLUokXHHk40bg/viewform',
-            hindi: 'YOUR_HINDI_FORM_URL_HERE'
-        };
-
         function goToForm(lang) {
-            window.location.href = FORM_URLS[lang];
+            const url = lang === 'hindi' ? CONFIG.HINDI_FORM_URL : CONFIG.ENGLISH_FORM_URL;
+            window.location.href = url;
         }
     </script>
 </body>
